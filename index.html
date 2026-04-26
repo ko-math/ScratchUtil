@@ -9,7 +9,7 @@
     <pre>
         <code>
             javascript:
-            (async () => {
+            ( () => {
               const u = location.pathname.split("/")[2];
             
               if (!u) {
@@ -32,6 +32,23 @@
               current.style.color = "#888";
             
               el.appendChild(current);
+            })();
+            (()=>{
+              const a = document.createElement('a');
+              a.href = location.href.replace('scratch.mit.edu/projects','turbowarp.org');
+              a.target = '_blank';
+            
+              const img = document.createElement('img');
+              img.src = 'https://ko-math.github.io/ScratchUtil/t.png'; 
+              img.style.width = '24px';
+              img.style.height = '24px';
+            
+              a.appendChild(img);
+            
+              a.style = 'display:inline-block;margin:8px;padding:6px;background:#ff4c4c;border-radius:6px;';
+            
+              const target = document.querySelector('#view');
+              if (target) target.prepend(a);
             })();
         </code>
     </pre>
