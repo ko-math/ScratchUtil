@@ -18,7 +18,7 @@ if(url.includes('scratch.mit.edu')){
         })();
     }
     if(url.includes('projects')){
-        (()=>{
+        (() => {
             if(!(document.querySelector('#SUTurbutton'))){
               const a = document.createElement('a');
               a.href = location.href.replace('scratch.mit.edu/projects','turbowarp.org');
@@ -40,6 +40,24 @@ if(url.includes('scratch.mit.edu')){
             }
         })();
     }
+    const message = true;
+    if(message){
+        (() => {
+            let el = document.createElement('button');
+            el.style.position = 'fixed';
+            el.style.top = '100px';
+            el.style.right = '100px';
+            el.style.width = '100px';
+            el.style.height = '50px';
+            el.style.borderRadius = '15px';
+        })();
+    }
 } else {
     alert('Scratchで開いてください');
 }
+
+
+
+
+
+
