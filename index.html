@@ -70,7 +70,7 @@
         function copy(){
             const copyTextParagraph = document.querySelector('#copy');
             const copyText = copyTextParagraph.textContent;
-            copyText.execCommand();
+            navigator.clipboard.writeText(copyText);
         }
     </script>
 </body>
