@@ -51,7 +51,7 @@ if(url.includes('scratch.mit.edu')){
       box.style.right = '20px';
       box.style.padding = '10px';
       box.style.background = 'rgba(0,0,0,0.8)';
-      box.style.color = '#fff';
+      box.style.fontColor = '#fff';
       box.style.zIndex = 999999;
       box.style.borderRadius = '10px';
       box.style.fontFamily = 'monospace';
