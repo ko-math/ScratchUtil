@@ -80,6 +80,7 @@
             const code = document.querySelector('#copy').textContent;
             const oneLine = code.replace(/\s+/g, ' ').trim();
             navigator.clipboard.writeText(oneLine);
+            alert('copied!');
         }
     </script>
 </body>
