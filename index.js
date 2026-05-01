@@ -1,8 +1,7 @@
 const url = location.href;
 if(url.includes('scratch.mit.edu')){
     if(url.includes('/users/')){
-        Fetch()
-        fetch('./functions/GETmethod/userID.js').then(r=>r.text()).then(js=>eval(js));
+        Fetch('GET','userID');
     }
     if(url.includes('/projects/')){
         (() => {
