@@ -12,4 +12,4 @@ export default async function() {
     current.id = 'SUuserID';
     el.append(current);
   }
-};
+}
