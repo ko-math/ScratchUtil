@@ -6,7 +6,7 @@
     a.id = 'SUTurbutton';
     
     const img = document.createElement('img');
-    img.src = 'https://ko-math.github.io/ScratchUtil/t.png';
+    img.src = './t.png';
     img.style.width = '50px';
     img.style.height = '50px';
     img.style.position = 'relative';
