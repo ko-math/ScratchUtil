@@ -1,21 +1,8 @@
 const url = location.href;
 if(url.includes('scratch.mit.edu')){
     if(url.includes('/users/')){
-        (async () => {
-          if(!(document.querySelector('#SUuserID'))){
-              const u = location.pathname.split("/")[2];
-              const r = await fetch("https://api.scratch.mit.edu/users/" + u);
-              const d = await r.json();
-            
-              const el = document.querySelector('.header-text .profile-details');
-            
-              const current = document.createElement('span');
-              current.textContent = `UserID: ${d.id}`;
-              current.style.color = "#888";
-              current.id = 'SUuserID';
-              el.append(current);
-            }
-        })();
+        Fetch()
+        fetch('./functions/GETmethod/userID.js').then(r=>r.text()).then(js=>eval(js));
     }
     if(url.includes('/projects/')){
         (() => {
@@ -143,6 +130,9 @@ if(url.includes('scratch.mit.edu')){
     alert('Scratchで開いてください');
 }
 
+function Fetch(method,name){
+    fetch(`./functions/${method}method/${name}.js`).then(r=>r.text()).then(js=>eval(js));
+}
 
 
 
