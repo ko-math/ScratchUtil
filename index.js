@@ -135,7 +135,7 @@ async function run(method,name){
     file.default();
 }
 async function Fetch(method, name) {
-    const module = await import(`./functions/${method}method/${name}.js`);
+    const module = await import(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}.js`);
     return module;
 }
 
