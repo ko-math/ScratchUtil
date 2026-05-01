@@ -1,7 +1,7 @@
 const url = location.href;
 if(url.includes('scratch.mit.edu')){
     if(url.includes('/users/')){
-        Fetch('GET','userID');
+        run('GET','userID');
     }
     if(url.includes('/projects/')){
         (() => {
@@ -129,8 +129,13 @@ if(url.includes('scratch.mit.edu')){
     alert('Scratchで開いてください');
 }
 
-function Fetch(method,name){
-    fetch(`./functions/${method}method/${name}.js`).then(r=>r.text()).then(js=>eval(js));
+function run(method,name){
+    const file = await Fetch(method,name);
+    file.default();
+}
+async function Fetch(method, name) {
+    const module = await import(`./functions/${method}method/${name}.js`);
+    return module;
 }
 
 
