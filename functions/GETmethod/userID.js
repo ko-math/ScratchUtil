@@ -1,4 +1,4 @@
-(async () => {
+export default async function() {
   if(!(document.querySelector('#SUuserID'))){
     const u = location.pathname.split("/")[2];
     const r = await fetch("https://api.scratch.mit.edu/users/" + u);
@@ -12,4 +12,4 @@
     current.id = 'SUuserID';
     el.append(current);
   }
-})();
+};
