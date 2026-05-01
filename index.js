@@ -4,52 +4,10 @@ if(url.includes('scratch.mit.edu')){
         run('GET','userID');
     }
     if(url.includes('/projects/')){
-        (() => {
-            if(!(document.querySelector('#SUTurbutton'))){
-              const a = document.createElement('a');
-              a.href = location.href.replace('scratch.mit.edu/projects','turbowarp.org');
-              a.target = '_blank';
-              a.id = 'SUTurbutton';
-            
-              const img = document.createElement('img');
-              img.src = 'https://ko-math.github.io/ScratchUtil/t.png';
-              img.style.width = '50px';
-              img.style.height = '50px';
-              img.style.position = 'relative';
-              img.style.left = '10px';
-              img.style.borderRadius = '15px';
-            
-              a.append(img);
-            
-              const target = document.querySelector('#view .preview .inner :first-child');
-              if (target) target.append(a);
-            }
-        })();
+        run('GET','TurbowarpButton');
     }
     if(url.includes('/search/')){
-        (() => {
-            const tabs = document.querySelector('[role="tablist"]');
-            const input = document.querySelector('#frc-q-1088');
-            const search = input.value;
-            fetch("https://api.scratch.mit.edu/users/" + search)
-            .then(r => r.json())
-            .then(d => {
-                const el = document.createElement('a');
-                el.href = `https://scratch.mit.edu/users/${search}/`;
-                tabs.append(el);
-                const img = document.createElement('img');
-                img.src = d.profile.images["90x90"];
-                img.style.width = "55px";
-                img.style.position = 'relative';
-                img.style.top = '10px';
-                img.style.verticalAlign = "middle";
-                el.append(img);
-            }).catch(() => {
-                const el = document.createElement('p');
-                el.textContent = 'なし';
-                tabs.append(el);
-            });
-        })();
+        run('GET','searchUser');
     }
     const message = true;
     /*
