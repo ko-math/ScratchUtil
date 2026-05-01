@@ -13,7 +13,7 @@ if(url.includes('scratch.mit.edu')){
     alert('Scratchで開いてください');
 }
 async function run(method, name) {
-    await fetch(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}.js`)
+    await fetch(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}/${name}.js`)
     .then(r => r.text())
     .then(r => eval(r));
 }
