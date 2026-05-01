@@ -1,5 +1,5 @@
 //即時
-(const url = location.href;
+const url = location.href;
 if(url.includes('scratch.mit.edu')){
     if(url.includes('/users/')){
         run('GET','userID');
@@ -128,8 +128,7 @@ if(url.includes('scratch.mit.edu')){
     */
 } else {
     alert('Scratchで開いてください');
-});
-]
+}
 /*
 async function run(method,name){
     const file = await Fetch(method,name);
