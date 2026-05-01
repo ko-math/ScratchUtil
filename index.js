@@ -130,7 +130,7 @@ if(url.includes('scratch.mit.edu')){
     alert('Scratchで開いてください');
 });
 
-function run(method,name){
+async function run(method,name){
     const file = await Fetch(method,name);
     file.default();
 }
