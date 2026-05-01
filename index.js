@@ -129,7 +129,8 @@ if(url.includes('scratch.mit.edu')){
 } else {
     alert('Scratchで開いてください');
 });
-
+]
+/*
 async function run(method,name){
     const file = await Fetch(method,name);
     file.default();
@@ -138,7 +139,10 @@ async function Fetch(method, name) {
     const module = await import(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}.js`);
     return module;
 }
-
+*/
+async function run(method, name) {
+    const file = await fetch(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}.js`).then(r=>r.text()).then(r=>eval(r));
+}
 
 
 
