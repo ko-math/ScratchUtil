@@ -1,4 +1,3 @@
-//即時
 const url = location.href;
 if(url.includes('scratch.mit.edu')){
     if(url.includes('/users/')){
@@ -140,7 +139,9 @@ async function Fetch(method, name) {
 }
 */
 async function run(method, name) {
-    const file = await fetch(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}.js`).then(r=>r.text()).then(r=>eval(r));
+    await fetch(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}.js`)
+    .then(r=>r.text())
+    .then(r=>eval(r));
 }
 
 
