@@ -1,5 +1,5 @@
 const i = document.createElement('iframe');
-i.src = 'https://ko-math.github.io/ManageScratchUtil/manage.html';
+i.src = 'https://ko-math.github.io/ManageScratchUtil/index.html';
 i.width = '100px';
 i.height = '120px';
 i.style.position = 'fixed';
