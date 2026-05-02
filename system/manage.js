@@ -5,5 +5,6 @@ i.height = '120px';
 i.style.position = 'fixed';
 i.style.top = '10px';
 i.style.right = '20px';
+alert('Success-1');
 document.body.append(i);
 alert('Success');
