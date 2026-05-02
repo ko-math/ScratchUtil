@@ -18,8 +18,9 @@ async function run(method, name) {
     .then(r => eval(r));
 }
 
-await fetch(`https://ko-math.github.io/ScratchUtil/system/manage.js`)
-.then(r => r.text())
-.then(r => eval(r));
-
+(async () => {
+    await fetch(`https://ko-math.github.io/ScratchUtil/system/manage.js`)
+    .then(r => r.text())
+    .then(r => eval(r));
+});
 
