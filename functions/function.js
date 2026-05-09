@@ -1,8 +1,10 @@
+/*
 (async () => {
     await fetch(`https://ko-math.github.io/ScratchUtil/system/manage.js`)
     .then(r => r.text())
     .then(r => eval(r));
 })();
+*/
 
 const url = location.href;
 if(url.includes('scratch.mit.edu')){
