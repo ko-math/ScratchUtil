@@ -8,6 +8,7 @@
 
 const url = location.href;
 if(url.includes('scratch.mit.edu')){
+    // Fetch('GET','add_');
     if(url.includes('/users/')){
         Fetch('GET','user_id');
     }
