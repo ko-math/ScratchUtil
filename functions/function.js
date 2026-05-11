@@ -9,18 +9,19 @@
 const url = location.href;
 if(url.includes('scratch.mit.edu')){
     if(url.includes('/users/')){
-        run('GET','userID');
+        Fetch('GET','user_id');
     }
     if(url.includes('/projects/')){
-        run('GET','TurbowarpButton');
+        Fetch('GET','turbowarp_button');
     }
     if(url.includes('/search/')){
-        run('GET','searchUser');
+        Fetch('GET','search_user');
     }
 } else {
     alert('Scratchで開いてください');
 }
-async function run(method, name) {
+
+async function Fetch(method, name) {
     await fetch(`https://ko-math.github.io/ScratchUtil/functions/${method}method/${name}/${name}.js`)
     .then(r => r.text())
     .then(r => eval(r));
