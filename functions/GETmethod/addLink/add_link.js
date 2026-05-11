@@ -1,7 +1,6 @@
-const inner = document.body.innerHTML;
+let inner = document.body.innerHTML;
 inner = link(inner);
-
-
+document.body.innerHTML = inner;
 
 function link(text){
     return text.replace(
