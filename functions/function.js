@@ -10,13 +10,13 @@ const url = location.href;
 if(url.includes('scratch.mit.edu')){
     // Fetch('GET','add_');
     if(url.includes('/users/')){
-        Fetch('GET','user_id');
+        Fetch('GET','UserId');
     }
     if(url.includes('/projects/')){
-        Fetch('GET','turbowarp_button');
+        Fetch('GET','TurbowarpButton');
     }
     if(url.includes('/search/')){
-        Fetch('GET','search_user');
+        Fetch('GET','SearchUser');
     }
 } else {
     alert('Scratchで開いてください');
